@@ -1,0 +1,29 @@
+app:
+  name: relayer
+  port: 8000
+  env: development
+  url: localhost
+  prefix: /api
+
+database:
+  type: mysql
+  host: localhost
+  port: 3337
+  username: test
+  password: test
+  database: test
+  logging: true
+  entities:
+    - 'dist/**/*.entity{.ts,.js}'
+cron:
+  enable:
+    __name: true
+    __format: json
+
+rpc: https://rpc.ankr.com/
+privateKey: 0x00000000000000
+relayContract: 0x00000000000000
+signerAddress: 0x00000000000000
+threshold: 5000
+maxAmountTx: 10
+prefixMessage: 'Relay'
